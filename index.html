@@ -42,8 +42,11 @@
   @keyframes robotFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-20px)} }
   .hero-content { position:relative; z-index:2; max-width:900px; padding:2rem; }
   .event-badge { display:inline-block; font-family:'Share Tech Mono',monospace; font-size:0.68rem; color:var(--acid); border:1px solid var(--acid); padding:0.3rem 1rem; letter-spacing:0.2em; margin-bottom:1.5rem; animation:fadeIn 0.8s ease both; }
-  .hero-title { font-family:'Orbitron',monospace; font-size:clamp(1.6rem,6vw,6rem); font-weight:900; line-height:1; color:#fff; text-shadow:0 0 40px rgba(0,245,255,0.4),0 0 80px rgba(0,245,255,0.2); animation:fadeIn 0.8s 0.2s ease both; }
-  .hero-title .year { color:var(--neon); display:block; font-size:clamp(1.8rem,7.5vw,7rem); }
+
+  /* HERO TITLE — scales cleanly on all screen sizes */
+  .hero-title { font-family:'Orbitron',monospace; font-size:clamp(1.1rem,5.5vw,6rem); font-weight:900; line-height:1.05; color:#fff; text-shadow:0 0 40px rgba(0,245,255,0.4),0 0 80px rgba(0,245,255,0.2); animation:fadeIn 0.8s 0.2s ease both; letter-spacing:0.05em; }
+  .hero-title .year { color:var(--neon); display:block; font-size:clamp(1.5rem,8vw,7rem); letter-spacing:0.1em; }
+
   .hero-subtitle { font-size:1.2rem; font-weight:300; letter-spacing:0.4em; text-transform:uppercase; color:rgba(200,232,255,0.6); margin:1.5rem 0; animation:fadeIn 0.8s 0.4s ease both; }
   .hero-date { font-family:'Share Tech Mono',monospace; font-size:0.9rem; color:var(--neon); letter-spacing:0.12em; margin-bottom:2.5rem; animation:fadeIn 0.8s 0.6s ease both; line-height:1.5; }
   .hero-date span { color:var(--acid); margin:0 0.5rem; }
@@ -77,9 +80,9 @@
   .section-title em { font-style:normal; color:var(--neon); }
   .section-desc { color:rgba(200,232,255,0.55); font-size:1.05rem; max-width:600px; line-height:1.7; }
 
-  /* EVENTS */
+  /* EVENTS — 3 col desktop, 2 col tablet, 1 col mobile */
   #events { background:var(--mid); }
-  .events-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:1.5rem; margin-top:3rem; }
+  .events-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:3rem; }
   .event-card { background:var(--panel); border:1px solid rgba(0,245,255,0.1); position:relative; overflow:hidden; transition:border-color 0.3s,transform 0.3s,opacity 0.6s,box-shadow 0.3s; clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px)); display:flex; flex-direction:column; }
   .event-card::before { content:''; position:absolute; top:0; right:20px; width:0; height:0; border-left:20px solid transparent; border-top:20px solid rgba(0,245,255,0.2); z-index:5; }
   .event-card:hover { border-color:rgba(0,245,255,0.45); transform:translateY(-5px) scale(1.02); box-shadow:0 12px 35px rgba(0,245,255,0.12); }
@@ -197,7 +200,11 @@
   .reveal { opacity:0; transform:translateY(40px); transition:all 0.7s cubic-bezier(0.16,1,0.3,1); }
   .reveal.active { opacity:1; transform:translateY(0); }
 
-  /* ===========================  MOBILE  =========================== */
+  /* =====================================================================
+     RESPONSIVE BREAKPOINTS
+     ===================================================================== */
+
+  /* TABLET — ≤900px: 2-col events, stacked venue/footer, mobile nav */
   @media (max-width:900px) {
     nav { padding:1rem 1.5rem; }
     .menu-toggle { display:block; }
@@ -207,35 +214,39 @@
     .btn-secondary { margin-left:0; }
     .stats-bar { flex-wrap:wrap; gap:1.5rem; padding:1.5rem; }
     .stat { border-right:none; padding:0.5rem; width:45%; }
-    .venue-grid, .footer-grid { grid-template-columns:1fr; gap:2rem; }
+    .events-grid { grid-template-columns:repeat(2,1fr); }
+    .venue-grid { grid-template-columns:1fr; gap:2rem; }
+    .footer-grid { grid-template-columns:1fr 1fr; gap:2rem; }
     .venue-map { height:280px; }
     .schedule-item { grid-template-columns:1fr; gap:0.5rem; padding:1rem; }
     .reg-tiers { flex-direction:column; align-items:center; }
     .tier-card { width:100%; max-width:320px; }
   }
 
+  /* MOBILE — ≤600px: single col everything, hero title fits one line */
   @media (max-width:600px) {
-    .hero-title { font-size:clamp(1.4rem,9vw,2.4rem); letter-spacing:0.02em; word-break:break-word; }
-    .hero-title .year { font-size:clamp(1.6rem,10vw,2.8rem); }
-    .hero-content { padding:1rem; }
+    .hero-title { font-size:clamp(1rem,8.5vw,1.8rem); letter-spacing:0.02em; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .hero-title .year { font-size:clamp(1.3rem,10vw,2.2rem); letter-spacing:0.05em; }
+    .hero-content { padding:0.75rem; }
+    .hero-subtitle { font-size:0.95rem; letter-spacing:0.15em; }
     .hero-date { font-size:0.75rem; letter-spacing:0.08em; }
-    .hero-subtitle { font-size:1rem; letter-spacing:0.2em; }
-    .event-badge { font-size:0.55rem; padding:0.3rem 0.5rem; }
+    .event-badge { font-size:0.55rem; padding:0.3rem 0.5rem; letter-spacing:0.1em; }
     .btn-primary, .btn-secondary { font-size:0.75rem; padding:0.8rem 1.5rem; letter-spacing:0.08em; }
     .countdown { gap:1rem; flex-wrap:wrap; }
     .count-sep { display:none; }
     .count-item { width:40%; }
     .stat { width:100%; border-bottom:1px solid rgba(0,245,255,0.1); padding-bottom:1rem; }
     .stat:last-child { border-bottom:none; }
+    .events-grid { grid-template-columns:1fr; }
     .schedule-tabs { flex-direction:column; width:100%; }
     .tab-btn { width:100%; text-align:center; border-bottom:none; border-left:2px solid transparent; padding:1rem; background:rgba(0,245,255,0.02); margin-bottom:2px; }
     .tab-btn.active { border-left-color:var(--neon); background:rgba(0,245,255,0.08); }
     section { padding:4rem 1.5rem; }
     .section-title { font-size:clamp(1.4rem,7vw,2rem); }
+    .footer-grid { grid-template-columns:1fr; }
     .sponsors-row { gap:1rem; }
     .venue-map { height:240px; }
     .map-open-btn { font-size:0.7rem; padding:0.5rem 0.9rem; }
-    .footer-grid { grid-template-columns:1fr; }
     .notice-box { padding:1rem; clip-path:none; }
     .notice-box p { font-size:0.72rem; }
   }
@@ -468,7 +479,7 @@
   <h2 class="section-title reveal">THE <em>VENUE</em></h2>
   <div class="venue-grid">
 
-    <!-- REAL GOOGLE MAPS EMBED -->
+    <!-- GOOGLE MAPS LIVE EMBED -->
     <div class="venue-map reveal">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d952.24!2d78.1067748!3d18.6675805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcddb096b13f1f7%3A0x96a63122e0d5f665!2sKakatiya%20Olympiad%20School!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -503,9 +514,9 @@
         <div><strong>Contact</strong><p>Anilkova.ekakatiya@gmail.com &nbsp;|&nbsp; +91 9949613433</p></div>
       </div>
 
-      <!-- CLICKABLE GOOGLE MAPS LINK -->
+      <!-- OPEN IN GOOGLE MAPS BUTTON -->
       <a
-        href="https://www.google.com/maps/place/Kakatiya+Olympiad+School/@18.6675805,78.1067748,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgIDcvdHJYw!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FAHVAwerdrhaCQQI_c6j8V48OcJAxPYejBU_i5Rb9OqgvJdCk6CeMwBsCzAvOHfV1IZVF9MyoD7sJqs_eyVBdjJs1YrlE4kS8qHMCZDoxffiLc4LI7Ja6WTPv2PES_8U7FV-FvJnbP_s_%3Dw152-h86-k-no!7i1920!8i1080!4m11!1m2!2m1!1sKakatiya+Olympiad+School,+Kakatiya+Olympiad+School,+Pragathi+Nagar,+Nizamabad,+Telangana+503003!3m7!1s0x3bcddb096b13f1f7:0x96a63122e0d5f665!8m2!3d18.6675805!4d78.1067748!10e5!15sCl9LYWthdGl5YSBPbHltcGlhZCBTY2hvb2wsIEtha2F0aXlhIE9seW1waWFkIFNjaG9vbCwgUHJhZ2F0aGkgTmFnYXIsIE5pemFtYWJhZCwgVGVsYW5nYW5hIDUwMzAwM5IBGGdlbmVyYWxfZWR1Y2F0aW9uX3NjaG9vbOABAA!16s%2Fg%2F11ffv3yvlh?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D"
+        href="https://www.google.com/maps/place/Kakatiya+Olympiad+School/@18.6675805,78.1067748,3a,75y,90t/data=!3m8!1e2!3m6!1sCIHM0ogKEICAgIDcvdHJYw!2e10!3e12!6shttps:%2F%2Flh3.googleusercontent.com%2Fgps-cs-s%2FAHVAwerdrhaCQQI_c6j8V48OcJAxPYejBU_i5Rb9OqgvJdCk6CeMwBsCzAvOHfV1IZVF9MyoD7sJqs_eyVBdjJs1YrlE4kS8qHMCZDoxffiLc4LI7Ja6WTPv2PES_8U7FV-FvJnbP_s_%3Dw152-h86-k-no!7i1920!8i1080!4m11!1m2!2m1!1sKakatiya+Olympiad+School!3m7!1s0x3bcddb096b13f1f7:0x96a63122e0d5f665!8m2!3d18.6675805!4d78.1067748!10e5!16s%2Fg%2F11ffv3yvlh?entry=ttu"
         target="_blank"
         rel="noopener noreferrer"
         class="map-open-btn">
