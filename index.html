@@ -89,12 +89,10 @@
   #events { background:var(--mid); }
   .events-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:1.5rem; margin-top:3rem; }
   
-  /* Updated Event Cards Layout for Images */
   .event-card { background:var(--panel); border:1px solid rgba(0,245,255,0.1); position:relative; overflow:hidden; transition:border-color 0.3s,transform 0.3s, opacity 0.6s, box-shadow 0.3s; clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px)); display: flex; flex-direction: column; }
   .event-card::before { content:''; position:absolute; top:0; right:20px; width:0; height:0; border-left:20px solid transparent; border-top:20px solid rgba(0,245,255,0.2); z-index: 5; }
   .event-card:hover { border-color:rgba(0,245,255,0.45); transform:translateY(-5px) scale(1.02); box-shadow:0 12px 35px rgba(0,245,255,0.12); }
   
-  /* Image Styles inside Cards */
   .event-img-wrapper { width: 100%; height: 180px; position: relative; overflow: hidden; border-bottom: 1px solid rgba(0,245,255,0.05); }
   .event-img-wrapper::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 30%, var(--panel) 100%); pointer-events: none; z-index: 2; }
   .event-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; z-index: 1; position: relative; }
@@ -131,7 +129,61 @@
   .speaker-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,transparent,var(--neon),transparent); transform:scaleX(0); transition:transform 0.4s; }
   .speaker-card:hover { border-color:rgba(0,245,255,0.35); transform:translateY(-4px); }
   .speaker-card:hover::after { transform:scaleX(1); }
-  .speaker-avatar { width:88px; height:88px; border-radius:50%; margin:0 auto 1rem; border:2px solid rgba(0,245,255,0.3); display:flex; align-items:center; justify-content:center; font-size:2rem; background:rgba(0,245,255,0.05); }
+
+  /* Updated speaker avatar to support images */
+  .speaker-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 2px solid rgba(0,245,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: rgba(0,245,255,0.05);
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0,245,255,0.15);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .speaker-card:hover .speaker-avatar {
+    border-color: rgba(0,245,255,0.8);
+    box-shadow: 0 0 25px rgba(0,245,255,0.3);
+  }
+  .speaker-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+  .speaker-card:hover .speaker-avatar img {
+    transform: scale(1.08);
+  }
+  /* Scan-line overlay on speaker avatar for cyberpunk effect */
+  .speaker-avatar::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0,245,255,0.04) 3px,
+      rgba(0,245,255,0.04) 4px
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .speaker-card:hover .speaker-avatar::after {
+    opacity: 1;
+  }
+
   .speaker-name { font-family:'Orbitron',monospace; font-size:0.82rem; font-weight:700; color:#fff; margin-bottom:0.3rem; }
   .speaker-role { font-size:0.78rem; color:var(--acid); margin-bottom:0.3rem; font-family:'Share Tech Mono',monospace; }
   .speaker-org { font-size:0.72rem; color:rgba(200,232,255,0.33); }
@@ -460,12 +512,61 @@
   <h2 class="section-title reveal">KEYNOTE <em>SPEAKERS</em></h2>
   <p class="section-desc reveal">Visionaries and leaders shaping robotics, education and innovation.</p>
   <div class="speakers-grid">
-    <div class="speaker-card reveal"><div class="speaker-avatar">🧑‍🔬</div><div class="speaker-name">Dr. Rajinikanth</div><div class="speaker-role">Chairman of KOS</div><div class="speaker-org">KAKATIYA INSTITUTIONS</div></div>
-    <div class="speaker-card reveal"><div class="speaker-avatar">👩‍💼</div><div class="speaker-name">Dr. Tejaswini</div><div class="speaker-role">Director, Manjeera &amp; Ganga</div><div class="speaker-org">KAKATIYA INSTITUTIONS</div></div>
-    <div class="speaker-card reveal"><div class="speaker-avatar">👨‍🔧</div><div class="speaker-name">Mr. Sadanand</div><div class="speaker-role">HOD, Robotics</div><div class="speaker-org">KAKATIYA INSTITUTIONS</div></div>
-    <div class="speaker-card reveal"><div class="speaker-avatar">🚀</div><div class="speaker-name">Mr. Mahendar</div><div class="speaker-role">CEO</div><div class="speaker-org">GMR Innovations</div></div>
-    <div class="speaker-card reveal"><div class="speaker-avatar">🚦</div><div class="speaker-name">Anil Kova</div><div class="speaker-role">Traffic Inspector</div><div class="speaker-org">TRAFFIC POLICE STN., NIZAMABAD</div></div>
-<div class="speaker-card reveal"><div class="speaker-avatar">🚦</div><div class="speaker-name">Anil Kova</div><div class="speaker-role">Traffic Inspector</div><div class="speaker-org">TRAFFIC POLICE STN., NIZAMABAD</div></div>
+
+    <div class="speaker-card reveal">
+      <div class="speaker-avatar">
+        <img src="11.jpg" alt="Dr. Rajinikanth">
+      </div>
+      <div class="speaker-name">Dr. Rajinikanth</div>
+      <div class="speaker-role">Chairman of KOS</div>
+      <div class="speaker-org">KAKATIYA INSTITUTIONS</div>
+    </div>
+
+    <div class="speaker-card reveal">
+      <div class="speaker-avatar">
+        <img src="22.jpg" alt="Dr. Tejaswini">
+      </div>
+      <div class="speaker-name">Dr. Tejaswini</div>
+      <div class="speaker-role">Director, Manjeera &amp; Ganga</div>
+      <div class="speaker-org">KAKATIYA INSTITUTIONS</div>
+    </div>
+
+    <div class="speaker-card reveal">
+      <div class="speaker-avatar">
+        <img src="33.jpg" alt="Mr. Sadanand">
+      </div>
+      <div class="speaker-name">Mr. Sadanand</div>
+      <div class="speaker-role">HOD, Robotics</div>
+      <div class="speaker-org">KAKATIYA INSTITUTIONS</div>
+    </div>
+
+    <div class="speaker-card reveal">
+      <div class="speaker-avatar">
+        <img src="44.jpg" alt="Mr. Mahendar">
+      </div>
+      <div class="speaker-name">Mr. Mahendar</div>
+      <div class="speaker-role">CEO</div>
+      <div class="speaker-org">GMR Innovations</div>
+    </div>
+
+    <div class="speaker-card reveal">
+      <div class="speaker-avatar">
+        <img src="55.jpg" alt="Anil Kova">
+      </div>
+      <div class="speaker-name">Anil Kova</div>
+      <div class="speaker-role">Traffic Inspector</div>
+      <div class="speaker-org">TRAFFIC POLICE STN., NIZAMABAD</div>
+    </div>
+
+    <div class="speaker-card reveal">
+      <div class="speaker-avatar">
+        <img src="66.jpg" alt="Anil Kova">
+      </div>
+      <div class="speaker-name">Anil Kova</div>
+      <div class="speaker-role">Traffic Inspector</div>
+      <div class="speaker-org">TRAFFIC POLICE STN., NIZAMABAD</div>
+    </div>
+
   </div>
 </section>
 
@@ -548,7 +649,7 @@
       </ul>
       <a href="#venue" class="tier-btn tier-btn-solid">BRING YOUR TEAM</a>
     </div>
-      </div>
+  </div>
   <div class="notice-box reveal">
     <p>📋 SPOT REGISTRATION OPENS DAILY FROM 9:00 AM AT THE GANGA MAIN ENTRANCE</p>
   </div>
@@ -608,7 +709,6 @@
     <span>© 2026 KOS TECHTRONICA. ALL RIGHTS RESERVED. BUILT BY ANIL KOVA.</span>
     <div class="social-links">
       <a href="#" class="social-link">INSTAGRAM</a>
-   
       <a href="#" class="social-link">YOUTUBE</a>
     </div>
   </div>
