@@ -21,6 +21,8 @@
   .nav-cta{background:var(--neon);color:var(--dark)!important;padding:0.5rem 1.2rem;font-weight:700!important;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
   .nav-cta:hover{background:var(--acid)}.nav-cta::after{display:none}
   .menu-toggle{display:none;color:var(--neon);font-size:1.8rem;cursor:pointer;z-index:1002;position:relative;line-height:1}
+
+  /* HERO */
   #hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;z-index:1;padding-top:80px;padding-left:1.5rem;padding-right:1.5rem}
   .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(0,245,255,0.09) 0%,transparent 70%),radial-gradient(ellipse at 80% 20%,rgba(170,255,0,0.05) 0%,transparent 50%),radial-gradient(ellipse at 20% 80%,rgba(255,34,68,0.05) 0%,transparent 50%)}
   .robot-silhouette{position:absolute;right:6%;bottom:0;width:320px;opacity:0.13;animation:robotFloat 4s ease-in-out infinite;pointer-events:none}
@@ -38,7 +40,7 @@
   .btn-primary{display:inline-block;background:transparent;border:2px solid var(--neon);color:var(--neon);font-family:'Orbitron',monospace;font-size:clamp(0.72rem,1.4vw,0.88rem);font-weight:700;letter-spacing:0.15em;padding:0.9rem 2.2rem;text-decoration:none;clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);transition:all 0.3s;position:relative;overflow:hidden}
   .btn-primary::before{content:'';position:absolute;inset:0;background:var(--neon);transform:scaleX(0);transform-origin:left;transition:transform 0.3s;z-index:-1}
   .btn-primary:hover{color:var(--dark);box-shadow:0 0 30px rgba(0,245,255,0.5)}.btn-primary:hover::before{transform:scaleX(1)}
-  .btn-secondary{display:inline-block;background:var(--acid);color:var(--dark);font-family:'Orbitron',monospace;font-size:clamp(0.72rem,1.4vw,0.88rem);font-weight:700;letter-spacing:0.1em;padding:0.9rem 2.2rem;text-decoration:none;clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);transition:all 0.3s;margin-left:1rem;animation:fadeIn 0.8s 1s ease both}
+  .btn-secondary{display:inline-block;background:var(--acid);color:var(--dark);font-family:'Orbitron',monospace;font-size:clamp(0.72rem,1.4vw,0.88rem);font-weight:700;letter-spacing:0.1em;padding:0.9rem 2.2rem;text-decoration:none;clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);transition:all 0.3s;animation:fadeIn 0.8s 1s ease both}
   .btn-secondary:hover{background:#ccff00;box-shadow:0 0 30px rgba(170,255,0,0.5)}
   .countdown{display:flex;justify-content:center;align-items:flex-start;gap:1.5rem;margin-top:2.8rem;animation:fadeIn 0.8s 1s ease both}
   .count-item{text-align:center;min-width:55px}
@@ -49,18 +51,22 @@
   .scroll-hint{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:0.5rem;font-family:'Share Tech Mono',monospace;font-size:0.58rem;color:rgba(200,232,255,0.3);letter-spacing:0.2em;animation:bounce 2s ease-in-out infinite}
   .scroll-hint svg{width:18px;opacity:0.4}
   @keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+
+  /* STATS */
   .stats-bar{background:var(--panel);border-top:1px solid rgba(0,245,255,0.15);border-bottom:1px solid rgba(0,245,255,0.15);padding:2rem 3rem;display:flex;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
   .stat{text-align:center;padding:0.5rem 2.5rem;border-right:1px solid rgba(0,245,255,0.15)}
   .stat:last-child{border-right:none}
   .stat-num{font-family:'Orbitron',monospace;font-size:2.2rem;font-weight:900;color:var(--acid);display:block}
   .stat-label{font-size:0.8rem;letter-spacing:0.15em;color:rgba(200,232,255,0.5);text-transform:uppercase}
+
+  /* SECTIONS */
   section{position:relative;z-index:1;padding:5.5rem 5%}
   .section-tag{font-family:'Share Tech Mono',monospace;font-size:0.72rem;color:var(--neon);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:0.5rem;display:block}
   .section-title{font-family:'Orbitron',monospace;font-size:clamp(1.8rem,4vw,3rem);font-weight:900;color:#fff;line-height:1.1;margin-bottom:1rem}
   .section-title em{font-style:normal;color:var(--neon)}
   .section-desc{color:rgba(200,232,255,0.55);font-size:1.02rem;max-width:600px;line-height:1.7}
 
-  /* ===== EVENTS ===== */
+  /* EVENTS */
   #events{background:var(--mid)}
   .events-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem}
   .event-card{background:var(--panel);border:1px solid rgba(0,245,255,0.1);position:relative;overflow:hidden;transition:border-color 0.3s,transform 0.3s,box-shadow 0.3s;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,20px 100%,0 calc(100% - 20px));display:flex;flex-direction:column}
@@ -79,7 +85,7 @@
   .btn-rulebook{display:inline-flex;align-items:center;gap:0.5rem;font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:var(--dark);background:var(--acid);padding:0.45rem 1rem;text-decoration:none;font-weight:700;letter-spacing:0.1em;clip-path:polygon(6px 0,100% 0,calc(100% - 6px) 100%,0 100%);transition:all 0.25s;border:none;cursor:pointer;user-select:none}
   .btn-rulebook:hover{background:#ccff00;box-shadow:0 0 18px rgba(170,255,0,0.5);transform:translateY(-1px)}
 
-  /* ===== SCHEDULE ===== */
+  /* SCHEDULE */
   #schedule{background:var(--dark)}
   .schedule-tabs{display:flex;gap:0.4rem;margin:2rem 0;border-bottom:1px solid rgba(0,245,255,0.15);flex-wrap:wrap}
   .tab-btn{display:inline-flex;flex-direction:column;align-items:center;gap:0.18rem;background:none;border:none;color:rgba(200,232,255,0.4);font-family:'Orbitron',monospace;font-size:0.7rem;padding:0.75rem 1.1rem;cursor:pointer;letter-spacing:0.08em;transition:all 0.2s;border-bottom:2px solid transparent;margin-bottom:-1px}
@@ -120,7 +126,7 @@
   .dtag-gold{color:#ffaa00;border-color:rgba(255,170,0,0.4);background:rgba(255,170,0,0.08)}
   .parallel-item{border-left-color:rgba(170,255,0,0.4)!important;background:rgba(170,255,0,0.025);margin-left:1.5rem}
 
-  /* ===== SPEAKERS ===== */
+  /* SPEAKERS */
   #speakers{background:var(--mid)}
   .speakers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
   .speaker-card{background:var(--panel);border:1px solid rgba(0,245,255,0.1);padding:2.2rem 1.5rem 1.8rem;text-align:center;transition:all 0.3s;position:relative;overflow:hidden}
@@ -134,7 +140,7 @@
   .speaker-role{font-size:0.8rem;color:var(--acid);margin-bottom:0.3rem;font-family:'Share Tech Mono',monospace}
   .speaker-org{font-size:0.72rem;color:rgba(200,232,255,0.33)}
 
-  /* ===== VENUE ===== */
+  /* VENUE */
   #venue{background:var(--dark)}
   .venue-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:3rem;align-items:start}
   .venue-map{background:var(--panel);border:1px solid rgba(0,245,255,0.15);height:380px;overflow:hidden;position:relative}
@@ -150,7 +156,7 @@
   .map-open-btn{display:inline-flex;align-items:center;gap:0.6rem;margin-top:1.2rem;font-family:'Share Tech Mono',monospace;font-size:0.76rem;color:var(--neon);text-decoration:none;border:1px solid rgba(0,245,255,0.35);padding:0.6rem 1.2rem;transition:all 0.3s;letter-spacing:0.1em;background:rgba(0,245,255,0.05);clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
   .map-open-btn:hover{background:rgba(0,245,255,0.14);border-color:var(--neon);box-shadow:0 0 20px rgba(0,245,255,0.25);color:#fff}
 
-  /* ===== REGISTER ===== */
+  /* REGISTER */
   #register{background:linear-gradient(135deg,var(--mid) 0%,#0a1f12 50%,var(--mid) 100%);text-align:center}
   #register .section-title{text-align:center}#register .section-desc{margin:1rem auto;text-align:center}
   .reg-tiers{display:flex;justify-content:center;gap:1.5rem;margin:3rem 0;flex-wrap:wrap}
@@ -171,7 +177,7 @@
   .contact-note{font-family:'Share Tech Mono',monospace;font-size:0.76rem;color:rgba(200,232,255,0.3);margin-top:0.5rem}
   .contact-note a{color:var(--neon);text-decoration:none}
 
-  /* ===== SPONSORS ===== */
+  /* SPONSORS */
   #sponsors{background:var(--dark);border-top:1px solid rgba(0,245,255,0.08);padding:3rem 5%}
   .sponsors-title{text-align:center;font-family:'Share Tech Mono',monospace;font-size:0.72rem;color:rgba(200,232,255,0.3);letter-spacing:0.3em;text-transform:uppercase;margin-bottom:2rem}
   .sponsors-row{display:flex;justify-content:center;align-items:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
@@ -181,7 +187,49 @@
   .sponsor-logo{height:110px;width:auto;max-width:180px;flex-shrink:0;object-fit:contain;transition:transform 0.4s ease,filter 0.4s ease;filter:drop-shadow(0 0 5px rgba(0,245,255,0.1))}
   .sponsor-logo:hover{transform:scale(1.1);filter:drop-shadow(0 0 20px rgba(0,245,255,0.6))}
 
-  /* ===== FOOTER ===== */
+  /* FEEDBACK */
+  #feedback{background:var(--mid)}
+  .feedback-wrap{max-width:800px;margin:0 auto;background:var(--panel);border:1px solid rgba(0,245,255,0.15);padding:3rem;position:relative;clip-path:polygon(0 0,calc(100% - 24px) 0,100% 24px,100% 100%,24px 100%,0 calc(100% - 24px))}
+  .feedback-wrap::before{content:'';position:absolute;top:0;right:24px;width:0;height:0;border-left:24px solid transparent;border-top:24px solid rgba(0,245,255,0.2);z-index:5}
+  .feedback-form{display:flex;flex-direction:column;gap:1.5rem}
+  .fb-row{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+  .fb-group{display:flex;flex-direction:column;gap:0.5rem}
+  .fb-label{font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:rgba(200,232,255,0.5);letter-spacing:0.18em}
+  .fb-req{color:var(--acid)}
+  .fb-input{background:rgba(0,245,255,0.04);border:1px solid rgba(0,245,255,0.18);color:var(--text);font-family:'Rajdhani',sans-serif;font-size:0.95rem;padding:0.75rem 1rem;outline:none;transition:border-color 0.25s,box-shadow 0.25s;width:100%}
+  .fb-input::placeholder{color:rgba(200,232,255,0.25)}
+  .fb-input:focus{border-color:var(--neon);box-shadow:0 0 0 3px rgba(0,245,255,0.08),inset 0 0 12px rgba(0,245,255,0.04);color:#fff}
+  .fb-input:focus::placeholder{color:transparent}
+  .fb-select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300f5ff' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;cursor:pointer}
+  .fb-select option{background:var(--panel);color:var(--text)}
+  .fb-textarea{min-height:130px;resize:vertical;line-height:1.6}
+  .fb-rating{display:flex;align-items:center;gap:0.4rem;margin-top:0.3rem}
+  .star{font-size:2rem;color:rgba(200,232,255,0.15);cursor:pointer;transition:color 0.15s,transform 0.15s;line-height:1;user-select:none}
+  .star:hover,.star.active{color:#ffcc00;transform:scale(1.2);text-shadow:0 0 12px rgba(255,204,0,0.6)}
+  .rating-label{font-family:'Share Tech Mono',monospace;font-size:0.65rem;color:rgba(200,232,255,0.35);letter-spacing:0.12em;margin-left:0.6rem}
+  .fb-chips{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:0.3rem}
+  .chip{display:inline-flex;align-items:center;gap:0.45rem;font-family:'Share Tech Mono',monospace;font-size:0.68rem;color:rgba(200,232,255,0.45);border:1px solid rgba(0,245,255,0.15);padding:0.4rem 0.85rem;cursor:pointer;transition:all 0.2s;letter-spacing:0.06em;user-select:none}
+  .chip input{display:none}
+  .chip:hover{border-color:rgba(0,245,255,0.4);color:var(--neon)}
+  .chip:has(input:checked){background:rgba(0,245,255,0.1);border-color:var(--neon);color:var(--neon);box-shadow:0 0 10px rgba(0,245,255,0.15)}
+  .fb-radio-group{display:flex;flex-wrap:wrap;gap:0.8rem;margin-top:0.3rem}
+  .fb-radio{display:inline-flex;align-items:center;gap:0.5rem;font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:rgba(200,232,255,0.45);cursor:pointer;border:1px solid rgba(0,245,255,0.15);padding:0.5rem 1rem;transition:all 0.2s}
+  .fb-radio input{display:none}
+  .fb-radio:hover{border-color:rgba(170,255,0,0.4);color:var(--acid)}
+  .fb-radio:has(input:checked){background:rgba(170,255,0,0.08);border-color:var(--acid);color:var(--acid);box-shadow:0 0 10px rgba(170,255,0,0.15)}
+  .fb-radio span{letter-spacing:0.08em}
+  .fb-submit{display:inline-flex;align-items:center;gap:0.7rem;background:var(--neon);color:var(--dark);font-family:'Orbitron',monospace;font-size:0.82rem;font-weight:700;letter-spacing:0.15em;padding:0.95rem 3rem;border:none;cursor:pointer;clip-path:polygon(14px 0,100% 0,calc(100% - 14px) 100%,0 100%);transition:all 0.3s;margin-top:0.5rem}
+  .fb-submit:hover:not(:disabled){background:var(--acid);box-shadow:0 0 30px rgba(170,255,0,0.4);transform:translateY(-2px)}
+  .fb-submit:disabled{opacity:0.6;cursor:not-allowed}
+  .fb-success{display:none;text-align:center;padding:3rem 2rem}
+  .fb-success.show{display:block}
+  .fb-success-icon{width:70px;height:70px;border-radius:50%;background:rgba(170,255,0,0.1);border:2px solid var(--acid);color:var(--acid);font-size:2rem;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;box-shadow:0 0 30px rgba(170,255,0,0.3)}
+  .fb-success h3{font-family:'Orbitron',monospace;font-size:1.3rem;color:#fff;margin-bottom:0.8rem;letter-spacing:0.1em}
+  .fb-success p{color:rgba(200,232,255,0.55);font-size:0.95rem;line-height:1.7;max-width:500px;margin:0 auto 2rem}
+  .fb-reset{background:transparent;border:1px solid rgba(0,245,255,0.35);color:var(--neon);font-family:'Share Tech Mono',monospace;font-size:0.72rem;letter-spacing:0.12em;padding:0.65rem 1.5rem;cursor:pointer;transition:all 0.3s}
+  .fb-reset:hover{background:rgba(0,245,255,0.1);border-color:var(--neon)}
+
+  /* FOOTER */
   footer{background:var(--panel);border-top:1px solid rgba(0,245,255,0.1);padding:3rem 5%;position:relative;z-index:1}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
   .footer-brand .logo{font-size:1.3rem;display:block;margin-bottom:1rem}
@@ -191,8 +239,6 @@
   footer ul li a{color:rgba(200,232,255,0.4);text-decoration:none;font-size:0.86rem;display:block;padding:0.25rem 0;transition:color 0.2s}
   footer ul li a:hover{color:var(--neon)}
   .footer-bottom{border-top:1px solid rgba(0,245,255,0.08);padding-top:2rem;display:flex;justify-content:space-between;align-items:center;font-family:'Share Tech Mono',monospace;font-size:0.7rem;color:rgba(200,232,255,0.2);flex-wrap:wrap;gap:1rem}
-
-  /* ===== SOCIAL ICONS — COLORFUL ===== */
   .social-links{display:flex;gap:0.7rem;align-items:center}
   .social-icon{display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:10px;text-decoration:none;transition:all 0.3s;position:relative;flex-shrink:0}
   .social-insta{border:1px solid rgba(220,39,67,0.35);background:rgba(220,39,67,0.08)}
@@ -206,7 +252,7 @@
   @keyframes particleFly{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:0.8}90%{opacity:0.3}100%{transform:translateY(-100px) translateX(var(--drift));opacity:0}}
   .reveal{opacity:0;transform:translateY(35px);transition:all 0.7s cubic-bezier(0.16,1,0.3,1)}.reveal.active{opacity:1;transform:translateY(0)}
 
-  /* ===== TABLET ===== */
+  /* TABLET */
   @media(max-width:1024px){
     nav{padding:0.9rem 1.8rem}.menu-toggle{display:block}
     nav ul{position:fixed;top:0;right:-100%;height:100vh;width:260px;background:rgba(5,10,15,0.97);backdrop-filter:blur(15px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;transition:right 0.3s ease-in-out;border-left:1px solid rgba(0,245,255,0.2);z-index:1001}
@@ -218,9 +264,10 @@
     section{padding:4.5rem 4%}
     .speaker-avatar{width:150px;height:150px}
     .sponsor-logos{gap:2rem}.sponsor-logo{height:90px;max-width:150px}
+    .fb-row{grid-template-columns:1fr 1fr}
   }
 
-  /* ===== MOBILE ===== */
+  /* MOBILE */
   @media(max-width:600px){
     nav{padding:0.8rem 1.1rem}.logo{font-size:0.88rem;letter-spacing:0.1em}
     #hero{padding-top:68px;padding-left:0.9rem;padding-right:0.9rem;min-height:100svh}
@@ -273,27 +320,33 @@
     .footer-grid{grid-template-columns:1fr;gap:1.6rem}.footer-brand .logo{font-size:1rem}.footer-desc{font-size:0.8rem}
     footer h4{font-size:0.63rem;margin-bottom:0.7rem}footer ul li a{font-size:0.8rem}
     .footer-bottom{flex-direction:column;align-items:flex-start;font-size:0.63rem;gap:0.8rem}
-    .social-links{gap:0.6rem}
-    .social-icon{width:38px;height:38px}
+    .social-links{gap:0.6rem}.social-icon{width:38px;height:38px}
+    .feedback-wrap{padding:1.8rem 1.2rem;clip-path:none}.feedback-wrap::before{display:none}
+    .fb-row{grid-template-columns:1fr}
+    .fb-chips{gap:0.5rem}.chip{font-size:0.62rem;padding:0.35rem 0.7rem}
+    .fb-radio-group{gap:0.5rem}.fb-radio{font-size:0.63rem;padding:0.4rem 0.7rem}
+    .fb-submit{width:100%;justify-content:center;font-size:0.75rem;padding:0.9rem 1rem}
+    .star{font-size:1.6rem}
   }
   @media(max-width:360px){
     .hero-title{font-size:clamp(1.3rem,9vw,1.7rem)}.hero-title .year{font-size:clamp(1.5rem,10.5vw,2rem)}
     .hero-date .date-line{font-size:0.62rem}.hero-date .venue-line{font-size:0.58rem}
     .count-num{font-size:1.25rem}.count-sep{font-size:1rem}.count-label{font-size:0.4rem}
-    .speakers-grid{grid-template-columns:1fr}
-    .speaker-avatar{width:130px;height:130px}
+    .speakers-grid{grid-template-columns:1fr}.speaker-avatar{width:130px;height:130px}
   }
 </style>
 </head>
 <body>
+
 <nav>
   <div class="logo">KOS <span>TECHTRONICA</span></div>
-  <div class="menu-toggle" id="mobile-menu-btn">☰</div>
+  <div class="menu-toggle" id="mobile-menu-btn">&#9776;</div>
   <ul id="nav-links">
     <li><a href="#events">Events</a></li>
     <li><a href="#schedule">Schedule</a></li>
     <li><a href="#speakers">Speakers</a></li>
     <li><a href="#venue">Venue</a></li>
+    <li><a href="#feedback">Feedback</a></li>
     <li><a href="#register" class="nav-cta">Register</a></li>
   </ul>
 </nav>
@@ -321,11 +374,11 @@
     <rect x="103" y="265" width="48" height="20" rx="5" fill="cyan" opacity="0.6"/>
   </svg>
   <div class="hero-content">
-    <div class="event-badge">◈ SOUTH INDIA'S BIGGEST SCHOOL LEVEL ROBO FEST ◈</div>
+    <div class="event-badge">&#9670; SOUTH INDIA'S BIGGEST SCHOOL LEVEL ROBO FEST &#9670;</div>
     <h1 class="hero-title">KOS<span class="year">CHAMPIONS LEAGUE</span>2026</h1>
     <p class="hero-subtitle">THE BATTLE OF YOUNG BOTS</p>
     <p class="hero-date">
-      <span class="date-line"><span class="accent">◈</span> March 23 – 28, 2026 <span class="accent">◈</span></span>
+      <span class="date-line"><span class="accent">&#9670;</span> March 23 &ndash; 28, 2026 <span class="accent">&#9670;</span></span>
       <span class="venue-line">KAKATIYA OLYMPIAD SCHOOL, NIZAMABAD</span>
     </p>
     <div class="hero-buttons">
@@ -348,33 +401,33 @@
 <div class="stats-bar">
   <div class="stat reveal"><span class="stat-num">2500+</span><span class="stat-label">Participants</span></div>
   <div class="stat reveal"><span class="stat-num">6</span><span class="stat-label">Events</span></div>
-  <div class="stat reveal"><span class="stat-num">₹25k+</span><span class="stat-label">Prize Pool</span></div>
+  <div class="stat reveal"><span class="stat-num">&#8377;25k+</span><span class="stat-label">Prize Pool</span></div>
   <div class="stat reveal"><span class="stat-num">8+</span><span class="stat-label">Expert Speakers</span></div>
   <div class="stat reveal"><span class="stat-num">5</span><span class="stat-label">Days of Action</span></div>
 </div>
 
 <section id="events">
-  <span class="section-tag reveal">// COMPETITIONS & CHALLENGES</span>
+  <span class="section-tag reveal">// COMPETITIONS &amp; CHALLENGES</span>
   <h2 class="section-title reveal">FEATURED <em>EVENTS</em></h2>
-  <p class="section-desc reveal">Six electrifying competitions — race, tackle, duel, think and conquer. Only the boldest bots prevail.</p>
+  <p class="section-desc reveal">Six electrifying competitions &mdash; race, tackle, duel, think and conquer. Only the boldest bots prevail.</p>
   <div class="events-grid">
-    <div class="event-card reveal"><div class="event-img-wrapper"><img src="1.jpg" alt="Robo Race" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ROBO RACE</div><div class="event-desc">Build the fastest autonomous bot and blaze through a challenging track layout. Speed, precision and smart navigation win the crown.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="a.pdf">📄 RULE BOOK</button></div></div></div>
-    <div class="event-card reveal"><div class="event-img-wrapper"><img src="2.jpg" alt="Robo Soccer" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ROBO SOCCER</div><div class="event-desc">Engineer your bot to dribble, dodge and score goals. Team-based robot soccer with real-time strategy and control challenges.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="b.pdf">📄 RULE BOOK</button></div></div></div>
-    <div class="event-card reveal"><div class="event-img-wrapper"><img src="3.jpg" alt="Robo Kabaddi" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ROBO KABADDI</div><div class="event-desc">A uniquely Indian twist — robots tag, evade and return in a digital kabaddi arena. Agility and strategy are your greatest weapons.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="c.pdf">📄 RULE BOOK</button></div></div></div>
-    <div class="event-card reveal"><div class="event-img-wrapper"><img src="4.jpg" alt="Robo Sumo" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ROBO SUMO</div><div class="event-desc">Two bots enter, one remains. Force your opponent out of the ring in this raw test of power, weight distribution and control.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="d.pdf">📄 RULE BOOK</button></div></div></div>
-    <div class="event-card reveal"><div class="event-img-wrapper"><img src="5.jpg" alt="All Terrain Race" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ALL TERRAIN RACE</div><div class="event-desc">Mud, ramps, obstacles and uneven ground — design a bot tough enough to conquer every surface in this ultimate endurance race.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="e.pdf">📄 RULE BOOK</button></div></div></div>
-    <div class="event-card reveal"><div class="event-img-wrapper"><img src="6.jpg" alt="Logic Robots" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">LOGIC ROBOTS</div><div class="event-desc">Program your bot to solve logic puzzles, mazes and sequential challenges autonomously. The sharpest algorithm wins — no brute force allowed.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="f.pdf">📄 RULE BOOK</button></div></div></div>
+    <div class="event-card reveal"><div class="event-img-wrapper"><img src="1.jpg" alt="Robo Race" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ROBO RACE</div><div class="event-desc">Build the fastest autonomous bot and blaze through a challenging track layout. Speed, precision and smart navigation win the crown.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="a.pdf">&#128196; RULE BOOK</button></div></div></div>
+    <div class="event-card reveal"><div class="event-img-wrapper"><img src="2.jpg" alt="Robo Soccer" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ROBO SOCCER</div><div class="event-desc">Engineer your bot to dribble, dodge and score goals. Team-based robot soccer with real-time strategy and control challenges.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="b.pdf">&#128196; RULE BOOK</button></div></div></div>
+    <div class="event-card reveal"><div class="event-img-wrapper"><img src="3.jpg" alt="Robo Kabaddi" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ROBO KABADDI</div><div class="event-desc">A uniquely Indian twist &mdash; robots tag, evade and return in a digital kabaddi arena. Agility and strategy are your greatest weapons.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="c.pdf">&#128196; RULE BOOK</button></div></div></div>
+    <div class="event-card reveal"><div class="event-img-wrapper"><img src="4.jpg" alt="Robo Sumo" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ROBO SUMO</div><div class="event-desc">Two bots enter, one remains. Force your opponent out of the ring in this raw test of power, weight distribution and control.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="d.pdf">&#128196; RULE BOOK</button></div></div></div>
+    <div class="event-card reveal"><div class="event-img-wrapper"><img src="5.jpg" alt="All Terrain Race" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">ALL TERRAIN RACE</div><div class="event-desc">Mud, ramps, obstacles and uneven ground &mdash; design a bot tough enough to conquer every surface in this ultimate endurance race.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="e.pdf">&#128196; RULE BOOK</button></div></div></div>
+    <div class="event-card reveal"><div class="event-img-wrapper"><img src="6.jpg" alt="Logic Robots" class="event-img"></div><div class="event-content"><div class="event-cat">COMPETITION</div><div class="event-name">LOGIC ROBOTS</div><div class="event-desc">Program your bot to solve logic puzzles, mazes and sequential challenges autonomously. The sharpest algorithm wins &mdash; no brute force allowed.</div><div class="event-meta"><button class="btn-rulebook" data-pdf="f.pdf">&#128196; RULE BOOK</button></div></div></div>
   </div>
 </section>
 
 <section id="schedule">
   <span class="section-tag reveal">// COMPETITION SCHEDULE</span>
   <h2 class="section-title reveal">THE <em>JOURNEY</em></h2>
-  <p class="section-desc reveal">Qualify on Mar 23–25, advance to Quarter-Finals & Semi-Finals on Mar 27, then battle for the championship on Mar 28.</p>
+  <p class="section-desc reveal">Qualify on Mar 23&ndash;25, advance to Quarter-Finals &amp; Semi-Finals on Mar 27, then battle for the championship on Mar 28.</p>
   <div class="sched-pipeline reveal">
-    <div class="pipeline-step"><div class="pipeline-dot qualif-dot"></div><div class="pipeline-label">MAR 23–25<br><span>QUALIFIERS</span></div></div>
+    <div class="pipeline-step"><div class="pipeline-dot qualif-dot"></div><div class="pipeline-label">MAR 23&ndash;25<br><span>QUALIFIERS</span></div></div>
     <div class="pipeline-line"></div>
-    <div class="pipeline-step"><div class="pipeline-dot qf-dot"></div><div class="pipeline-label">MAR 27<br><span>QF & SEMIS</span></div></div>
+    <div class="pipeline-step"><div class="pipeline-dot qf-dot"></div><div class="pipeline-label">MAR 27<br><span>QF &amp; SEMIS</span></div></div>
     <div class="pipeline-line"></div>
     <div class="pipeline-step"><div class="pipeline-dot final-dot"></div><div class="pipeline-label">MAR 28<br><span>GRAND FINALS</span></div></div>
   </div>
@@ -382,70 +435,55 @@
     <button class="tab-btn active" onclick="switchTab(this,'day1')">MAR 23<span class="tab-sub">QUALIFIER</span></button>
     <button class="tab-btn" onclick="switchTab(this,'day2')">MAR 24<span class="tab-sub">QUALIFIER</span></button>
     <button class="tab-btn" onclick="switchTab(this,'day3')">MAR 25<span class="tab-sub">QUALIFIER</span></button>
-    <button class="tab-btn" onclick="switchTab(this,'day4')">MAR 27<span class="tab-sub">QF & SEMIS</span></button>
+    <button class="tab-btn" onclick="switchTab(this,'day4')">MAR 27<span class="tab-sub">QF &amp; SEMIS</span></button>
     <button class="tab-btn" onclick="switchTab(this,'day5')">MAR 28<span class="tab-sub">FINALS</span></button>
   </div>
   <div id="day1" class="tab-content active">
-    <div class="day-banner reveal">
-      <div class="day-banner-left"><span class="day-banner-title">March 23 — Qualifier Day 1</span><span class="day-banner-meta">📍 KOS Ganga Campus</span></div>
-      <div class="day-banner-tags"><span class="dtag dtag-blue">Classes 7–9 · 5 Events</span><span class="dtag dtag-green">Class 1 · Parallel</span></div>
-    </div>
-    <div class="schedule-item reveal"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Registration & Welcome</div><div class="sch-venue">Ganga Main Entrance, KOS Campus</div></div><span></span></div>
-    <div class="schedule-item reveal"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Inauguration Ceremony & Keynote Address</div><div class="sch-venue">Ganga Campus Ground</div></div><span class="sch-badge badge-talk">KEYNOTE</span></div>
-    <div class="schedule-item reveal"><div class="sch-time">11:00 AM</div><div><div class="sch-event">Qualifier Rounds — Classes 7, 8 & 9 (5 Events)</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
-    <div class="schedule-item reveal parallel-item"><div class="sch-time">11:00 AM</div><div><div class="sch-event">Class 1 Event ↔ Running in Parallel</div><div class="sch-venue">Junior Arena, Ganga Campus</div></div><span class="sch-badge badge-junior">CLASS 1</span></div>
-    <div class="schedule-item reveal"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break</div><div class="sch-venue">—</div></div><span></span></div>
-    <div class="schedule-item reveal"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Qualifier Rounds Continue — Classes 7–9</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
+    <div class="day-banner reveal"><div class="day-banner-left"><span class="day-banner-title">March 23 &mdash; Qualifier Day 1</span><span class="day-banner-meta">&#128205; KOS Ganga Campus</span></div><div class="day-banner-tags"><span class="dtag dtag-blue">Classes 7&ndash;9 &middot; 5 Events</span><span class="dtag dtag-green">Class 1 &middot; Parallel</span></div></div>
+    <div class="schedule-item reveal"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Registration &amp; Welcome</div><div class="sch-venue">Ganga Main Entrance, KOS Campus</div></div><span></span></div>
+    <div class="schedule-item reveal"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Inauguration Ceremony &amp; Keynote Address</div><div class="sch-venue">Ganga Campus Ground</div></div><span class="sch-badge badge-talk">KEYNOTE</span></div>
+    <div class="schedule-item reveal"><div class="sch-time">11:00 AM</div><div><div class="sch-event">Qualifier Rounds &mdash; Classes 7, 8 &amp; 9 (5 Events)</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
+    <div class="schedule-item reveal parallel-item"><div class="sch-time">11:00 AM</div><div><div class="sch-event">Class 1 Event &harr; Running in Parallel</div><div class="sch-venue">Junior Arena, Ganga Campus</div></div><span class="sch-badge badge-junior">CLASS 1</span></div>
+    <div class="schedule-item reveal"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break</div><div class="sch-venue">&mdash;</div></div><span></span></div>
+    <div class="schedule-item reveal"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Qualifier Rounds Continue &mdash; Classes 7&ndash;9</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
     <div class="schedule-item reveal"><div class="sch-time">04:30 PM</div><div><div class="sch-event">Day 1 Qualifier Results Announced</div><div class="sch-venue">Ganga Campus Ground</div></div><span class="sch-badge badge-talk">RESULTS</span></div>
   </div>
   <div id="day2" class="tab-content">
-    <div class="day-banner">
-      <div class="day-banner-left"><span class="day-banner-title">March 24 — Qualifier Day 2</span><span class="day-banner-meta">📍 KOS Ganga Campus</span></div>
-      <div class="day-banner-tags"><span class="dtag dtag-blue">Classes 4–6 · 4 Events</span><span class="dtag dtag-green">Class 2 · Parallel</span></div>
-    </div>
-    <div class="schedule-item"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Registration & Briefing</div><div class="sch-venue">Ganga Main Entrance, KOS Campus</div></div><span></span></div>
-    <div class="schedule-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Qualifier Rounds — Classes 4, 5 & 6 (4 Events)</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
-    <div class="schedule-item parallel-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Class 2 Event ↔ Running in Parallel</div><div class="sch-venue">Junior Arena, Ganga Campus</div></div><span class="sch-badge badge-junior">CLASS 2</span></div>
-    <div class="schedule-item"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break</div><div class="sch-venue">—</div></div><span></span></div>
-    <div class="schedule-item"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Qualifier Rounds Continue — Classes 4–6</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
+    <div class="day-banner"><div class="day-banner-left"><span class="day-banner-title">March 24 &mdash; Qualifier Day 2</span><span class="day-banner-meta">&#128205; KOS Ganga Campus</span></div><div class="day-banner-tags"><span class="dtag dtag-blue">Classes 4&ndash;6 &middot; 4 Events</span><span class="dtag dtag-green">Class 2 &middot; Parallel</span></div></div>
+    <div class="schedule-item"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Registration &amp; Briefing</div><div class="sch-venue">Ganga Main Entrance, KOS Campus</div></div><span></span></div>
+    <div class="schedule-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Qualifier Rounds &mdash; Classes 4, 5 &amp; 6 (4 Events)</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
+    <div class="schedule-item parallel-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Class 2 Event &harr; Running in Parallel</div><div class="sch-venue">Junior Arena, Ganga Campus</div></div><span class="sch-badge badge-junior">CLASS 2</span></div>
+    <div class="schedule-item"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break</div><div class="sch-venue">&mdash;</div></div><span></span></div>
+    <div class="schedule-item"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Qualifier Rounds Continue &mdash; Classes 4&ndash;6</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
     <div class="schedule-item"><div class="sch-time">04:30 PM</div><div><div class="sch-event">Day 2 Qualifier Results Announced</div><div class="sch-venue">Ganga Campus Ground</div></div><span class="sch-badge badge-talk">RESULTS</span></div>
   </div>
   <div id="day3" class="tab-content">
-    <div class="day-banner">
-      <div class="day-banner-left"><span class="day-banner-title">March 25 — Qualifier Day 3</span><span class="day-banner-meta">📍 IM25 Campus</span></div>
-      <div class="day-banner-tags"><span class="dtag dtag-blue">Classes 3–9 · 5 Events</span><span class="dtag dtag-green">Class 3 · Parallel</span></div>
-    </div>
-    <div class="schedule-item"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Registration & Briefing</div><div class="sch-venue">IM25 Campus Entrance</div></div><span></span></div>
-    <div class="schedule-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Qualifier Rounds — Classes 3–9 (5 Events)</div><div class="sch-venue">Main Arena, IM25 Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
-    <div class="schedule-item parallel-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Class 3 Event ↔ Running in Parallel</div><div class="sch-venue">Junior Arena, IM25 Campus</div></div><span class="sch-badge badge-junior">CLASS 3</span></div>
-    <div class="schedule-item"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break & Expert Talk: Robotics & Future Tech</div><div class="sch-venue">IM25 Auditorium</div></div><span class="sch-badge badge-talk">TALK</span></div>
-    <div class="schedule-item"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Qualifier Rounds Continue — Classes 3–9</div><div class="sch-venue">Main Arena, IM25 Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
-    <div class="schedule-item"><div class="sch-time">04:30 PM</div><div><div class="sch-event">Final Qualifier Results — All 3 Days Consolidated</div><div class="sch-venue">IM25 Auditorium</div></div><span class="sch-badge badge-talk">RESULTS</span></div>
+    <div class="day-banner"><div class="day-banner-left"><span class="day-banner-title">March 25 &mdash; Qualifier Day 3</span><span class="day-banner-meta">&#128205; IM25 Campus</span></div><div class="day-banner-tags"><span class="dtag dtag-blue">Classes 3&ndash;9 &middot; 5 Events</span><span class="dtag dtag-green">Class 3 &middot; Parallel</span></div></div>
+    <div class="schedule-item"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Registration &amp; Briefing</div><div class="sch-venue">IM25 Campus Entrance</div></div><span></span></div>
+    <div class="schedule-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Qualifier Rounds &mdash; Classes 3&ndash;9 (5 Events)</div><div class="sch-venue">Main Arena, IM25 Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
+    <div class="schedule-item parallel-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Class 3 Event &harr; Running in Parallel</div><div class="sch-venue">Junior Arena, IM25 Campus</div></div><span class="sch-badge badge-junior">CLASS 3</span></div>
+    <div class="schedule-item"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break &amp; Expert Talk: Robotics &amp; Future Tech</div><div class="sch-venue">IM25 Auditorium</div></div><span class="sch-badge badge-talk">TALK</span></div>
+    <div class="schedule-item"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Qualifier Rounds Continue &mdash; Classes 3&ndash;9</div><div class="sch-venue">Main Arena, IM25 Campus</div></div><span class="sch-badge badge-comp">QUALIFIER</span></div>
+    <div class="schedule-item"><div class="sch-time">04:30 PM</div><div><div class="sch-event">Final Qualifier Results &mdash; All 3 Days Consolidated</div><div class="sch-venue">IM25 Auditorium</div></div><span class="sch-badge badge-talk">RESULTS</span></div>
   </div>
   <div id="day4" class="tab-content">
-    <div class="day-banner day-banner-gold">
-      <div class="day-banner-left"><span class="day-banner-title">March 27 — Quarter-Finals & Semi-Finals</span><span class="day-banner-meta">📍 KOS Ganga Campus · Qualifiers from Mar 23, 24 & 25 only</span></div>
-      <div class="day-banner-tags"><span class="dtag dtag-gold">INVITE ONLY</span></div>
-    </div>
-    <div class="schedule-item"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Check-in & Draw</div><div class="sch-venue">Ganga Campus Ground</div></div><span></span></div>
-    <div class="schedule-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Quarter-Final Rounds — All Events</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-qf">QTR-FINAL</span></div>
+    <div class="day-banner day-banner-gold"><div class="day-banner-left"><span class="day-banner-title">March 27 &mdash; Quarter-Finals &amp; Semi-Finals</span><span class="day-banner-meta">&#128205; KOS Ganga Campus &middot; Qualifiers from Mar 23, 24 &amp; 25 only</span></div><div class="day-banner-tags"><span class="dtag dtag-gold">INVITE ONLY</span></div></div>
+    <div class="schedule-item"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Check-in &amp; Draw</div><div class="sch-venue">Ganga Campus Ground</div></div><span></span></div>
+    <div class="schedule-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Quarter-Final Rounds &mdash; All Events</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-qf">QTR-FINAL</span></div>
     <div class="schedule-item"><div class="sch-time">11:30 AM</div><div><div class="sch-event">Quarter-Final Rounds Continue</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-qf">QTR-FINAL</span></div>
-    <div class="schedule-item"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break & QF Results Announced</div><div class="sch-venue">Ganga Campus Ground</div></div><span class="sch-badge badge-talk">RESULTS</span></div>
-    <div class="schedule-item"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Semi-Final Rounds — All Events</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-sf">SEMI-FINAL</span></div>
+    <div class="schedule-item"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break &amp; QF Results Announced</div><div class="sch-venue">Ganga Campus Ground</div></div><span class="sch-badge badge-talk">RESULTS</span></div>
+    <div class="schedule-item"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Semi-Final Rounds &mdash; All Events</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-sf">SEMI-FINAL</span></div>
     <div class="schedule-item"><div class="sch-time">03:30 PM</div><div><div class="sch-event">Semi-Final Rounds Continue</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-sf">SEMI-FINAL</span></div>
-    <div class="schedule-item"><div class="sch-time">04:30 PM</div><div><div class="sch-event">Grand Finalists Announced — All Events</div><div class="sch-venue">Ganga Campus Ground</div></div><span class="sch-badge badge-talk">RESULTS</span></div>
+    <div class="schedule-item"><div class="sch-time">04:30 PM</div><div><div class="sch-event">Grand Finalists Announced &mdash; All Events</div><div class="sch-venue">Ganga Campus Ground</div></div><span class="sch-badge badge-talk">RESULTS</span></div>
   </div>
   <div id="day5" class="tab-content">
-    <div class="day-banner day-banner-gold">
-      <div class="day-banner-left"><span class="day-banner-title">March 28 — Grand Finals</span><span class="day-banner-meta">📍 KOS Ganga Campus · Champions crowned across all events</span></div>
-      <div class="day-banner-tags"><span class="dtag dtag-gold">🏆 CHAMPIONSHIP</span></div>
-    </div>
-    <div class="schedule-item"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Finalists Check-in & Arena Preparation</div><div class="sch-venue">Ganga Campus Ground</div></div><span></span></div>
-    <div class="schedule-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Grand Finals — All Events Begin</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-final">GRAND FINAL</span></div>
-    <div class="schedule-item"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break</div><div class="sch-venue">—</div></div><span></span></div>
-    <div class="schedule-item"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Championship Rounds — Remaining Events</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-final">GRAND FINAL</span></div>
-    <div class="schedule-item"><div class="sch-time">03:30 PM</div><div><div class="sch-event">Prize Distribution & Champions Felicitation</div><div class="sch-venue">Main Auditorium</div></div><span class="sch-badge badge-talk">AWARDS</span></div>
-    <div class="schedule-item"><div class="sch-time">04:30 PM</div><div><div class="sch-event">Valedictory Ceremony & Closing</div><div class="sch-venue">Main Auditorium</div></div><span class="sch-badge badge-talk">CEREMONY</span></div>
+    <div class="day-banner day-banner-gold"><div class="day-banner-left"><span class="day-banner-title">March 28 &mdash; Grand Finals</span><span class="day-banner-meta">&#128205; KOS Ganga Campus &middot; Champions crowned across all events</span></div><div class="day-banner-tags"><span class="dtag dtag-gold">&#127942; CHAMPIONSHIP</span></div></div>
+    <div class="schedule-item"><div class="sch-time">09:00 AM</div><div><div class="sch-event">Finalists Check-in &amp; Arena Preparation</div><div class="sch-venue">Ganga Campus Ground</div></div><span></span></div>
+    <div class="schedule-item"><div class="sch-time">10:00 AM</div><div><div class="sch-event">Grand Finals &mdash; All Events Begin</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-final">GRAND FINAL</span></div>
+    <div class="schedule-item"><div class="sch-time">01:00 PM</div><div><div class="sch-event">Lunch Break</div><div class="sch-venue">&mdash;</div></div><span></span></div>
+    <div class="schedule-item"><div class="sch-time">02:00 PM</div><div><div class="sch-event">Championship Rounds &mdash; Remaining Events</div><div class="sch-venue">Main Arena, Ganga Campus</div></div><span class="sch-badge badge-final">GRAND FINAL</span></div>
+    <div class="schedule-item"><div class="sch-time">03:30 PM</div><div><div class="sch-event">Prize Distribution &amp; Champions Felicitation</div><div class="sch-venue">Main Auditorium</div></div><span class="sch-badge badge-talk">AWARDS</span></div>
+    <div class="schedule-item"><div class="sch-time">04:30 PM</div><div><div class="sch-event">Valedictory Ceremony &amp; Closing</div><div class="sch-venue">Main Auditorium</div></div><span class="sch-badge badge-talk">CEREMONY</span></div>
   </div>
 </section>
 
@@ -455,11 +493,11 @@
   <p class="section-desc reveal">Visionaries and leaders from diverse fields inspiring young minds in education and innovation.</p>
   <div class="speakers-grid">
     <div class="speaker-card reveal"><div class="speaker-avatar"><img src="11.jpg" alt="Dr. Rajinikanth"></div><div class="speaker-name">Dr. Rajinikanth</div><div class="speaker-role">Chairman of KOS</div><div class="speaker-org">KAKATIYA INSTITUTIONS</div></div>
-    <div class="speaker-card reveal"><div class="speaker-avatar"><img src="22.jpg" alt="Dr. Tejaswini"></div><div class="speaker-name">Dr. Tejaswini</div><div class="speaker-role">Director, Manjeera & Ganga</div><div class="speaker-org">KAKATIYA INSTITUTIONS</div></div>
+    <div class="speaker-card reveal"><div class="speaker-avatar"><img src="22.jpg" alt="Dr. Tejaswini"></div><div class="speaker-name">Dr. Tejaswini</div><div class="speaker-role">Director, Manjeera &amp; Ganga</div><div class="speaker-org">KAKATIYA INSTITUTIONS</div></div>
     <div class="speaker-card reveal"><div class="speaker-avatar"><img src="33.jpg" alt="Mr. Sadanand"></div><div class="speaker-name">Mr. Sadanand</div><div class="speaker-role">HOD, Robotics</div><div class="speaker-org">KAKATIYA INSTITUTIONS</div></div>
     <div class="speaker-card reveal"><div class="speaker-avatar"><img src="44.jpg" alt="Mr. Mahendar"></div><div class="speaker-name">Mr. Mahendar</div><div class="speaker-role">CEO</div><div class="speaker-org">GMR Innovations</div></div>
     <div class="speaker-card reveal"><div class="speaker-avatar"><img src="55.jpg" alt="Anil Kova"></div><div class="speaker-name">Anil Kova</div><div class="speaker-role">Traffic Inspector</div><div class="speaker-org">TRAFFIC POLICE STN., NIZAMABAD</div></div>
-    <div class="speaker-card reveal"><div class="speaker-avatar"><img src="66.jpg" alt="Anil Kova"></div><div class="speaker-name">Anil Kova</div><div class="speaker-role">Traffic Inspector</div><div class="speaker-org">TRAFFIC POLICE STN., NIZAMABAD</div></div>
+    <div class="speaker-card reveal"><div class="speaker-avatar"><img src="66.jpg" alt="Speaker 6"></div><div class="speaker-name">Speaker 6</div><div class="speaker-role">Role</div><div class="speaker-org">ORGANISATION</div></div>
   </div>
 </section>
 
@@ -468,19 +506,19 @@
   <h2 class="section-title reveal">THE <em>VENUE</em></h2>
   <div class="venue-grid">
     <div class="venue-map reveal">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.2238080562704!2d78.10640367688606!3d18.66746644988529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcddb096b13f1f7%3A0x96a63122e0d5f665!2sKakatiya%20Olympiad%20School!5e1!3m2!1sen!2sin!4v1772447956970!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kakatiya Olympiad School, Nizamabad"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d898.2238080562704!2d78.10640367688606!3d18.66746644988529!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcddb096b13f1f7%3A0x96a63122e0d5f665!2sKakatiya%20Olympiad%20School!5e1!3m2!1sen!2sin!4v1772447956970!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kakatiya Olympiad School, Nizamabad"></iframe>
       <div class="venue-map-overlay"></div>
     </div>
     <div class="venue-info reveal">
       <h3>Kakatiya Olympiad School</h3>
-      <div class="venue-detail"><span class="icon">📍</span><div><strong>Address</strong><p>Pragathi Nagar, Nizamabad, Telangana — 503003</p></div></div>
-      <div class="venue-detail"><span class="icon">📅</span><div><strong>Dates</strong><p>Mar 23–25, 27–28, 2026 (Mar 26 holiday)</p></div></div>
-      <div class="venue-detail"><span class="icon">🕐</span><div><strong>Timings</strong><p>9:30 AM – 5:00 PM each day</p></div></div>
-      <div class="venue-detail"><span class="icon">🚌</span><div><strong>Getting There</strong><p>Nizamabad Railway Station (~2 km). TSRTC buses and auto-rickshaws available.</p></div></div>
-      <div class="venue-detail"><span class="icon">📞</span><div><strong>Contact</strong><p><a href="mailto:kosdeptofrobotics@gmail.com" style="color:var(--neon);text-decoration:none;">kosdeptofrobotics@gmail.com</a> | +91 9949613433</p></div></div>
-      <a href="https://www.google.com/maps/search/kakatiya+olympiad+school+nizamabad/@18.6674664,78.1064037,206m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDIyNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" class="map-open-btn">
+      <div class="venue-detail"><span class="icon">&#128205;</span><div><strong>Address</strong><p>Pragathi Nagar, Nizamabad, Telangana &mdash; 503003</p></div></div>
+      <div class="venue-detail"><span class="icon">&#128197;</span><div><strong>Dates</strong><p>Mar 23&ndash;25, 27&ndash;28, 2026 (Mar 26 holiday)</p></div></div>
+      <div class="venue-detail"><span class="icon">&#128336;</span><div><strong>Timings</strong><p>9:30 AM &ndash; 5:00 PM each day</p></div></div>
+      <div class="venue-detail"><span class="icon">&#128652;</span><div><strong>Getting There</strong><p>Nizamabad Railway Station (~2 km). TSRTC buses and auto-rickshaws available.</p></div></div>
+      <div class="venue-detail"><span class="icon">&#128222;</span><div><strong>Contact</strong><p><a href="mailto:kosdeptofrobotics@gmail.com" style="color:var(--neon);text-decoration:none;">kosdeptofrobotics@gmail.com</a> | +91 9949613433</p></div></div>
+      <a href="https://www.google.com/maps/search/kakatiya+olympiad+school+nizamabad/@18.6674664,78.1064037,206m/data=!3m1!1e3?entry=ttu" target="_blank" rel="noopener noreferrer" class="map-open-btn">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-        VIEW ON GOOGLE MAPS ↗
+        VIEW ON GOOGLE MAPS &#8599;
       </a>
     </div>
   </div>
@@ -489,10 +527,10 @@
 <section id="register">
   <span class="section-tag reveal" style="display:block;text-align:center;">// JOIN THE REVOLUTION</span>
   <h2 class="section-title reveal">SECURE YOUR <em>SPOT</em></h2>
-  <p class="section-desc reveal">Walk-in and register on the spot at the venue — no prior booking needed. Come ready to compete!</p>
+  <p class="section-desc reveal">Walk-in and register on the spot at the venue &mdash; no prior booking needed. Come ready to compete!</p>
   <div class="reg-tiers">
     <div class="tier-card featured reveal">
-      <div class="tier-name">TEAM (2–5 members)</div>
+      <div class="tier-name">TEAM (2&ndash;5 members)</div>
       <div class="tier-price">Spot Reg <span>/ team</span></div>
       <ul class="tier-features">
         <li>Entry to chosen competition</li>
@@ -505,7 +543,7 @@
       <a href="#venue" class="tier-btn tier-btn-solid">BRING YOUR TEAM</a>
     </div>
   </div>
-  <div class="notice-box reveal"><p>📋 SPOT REGISTRATION OPENS DAILY FROM 9:00 AM AT THE GANGA MAIN ENTRANCE</p></div>
+  <div class="notice-box reveal"><p>&#128203; SPOT REGISTRATION OPENS DAILY FROM 9:00 AM AT THE GANGA MAIN ENTRANCE</p></div>
   <p class="contact-note reveal">
     Questions? <a href="mailto:kosdeptofrobotics@gmail.com">kosdeptofrobotics@gmail.com</a>
     <span class="contact-sep"> | </span>
@@ -514,13 +552,120 @@
 </section>
 
 <section id="sponsors">
-  <p class="sponsors-title reveal">POWERED BY & SUPPORTED BY</p>
-  <div class="sponsors-row reveal"><div class="sponsor-item">KAKATIYA JUNIOR COLLEGE</div><div class="sponsor-item">KAKATIYA IIT & MEDICAL ACADEMY</div></div>
-  <div class="sponsors-row reveal"><div class="sponsor-item">KAKATIYA INSTITUTE OF TECHNOLOGY & SCIENCE FOR WOMEN</div></div>
+  <p class="sponsors-title reveal">POWERED BY &amp; SUPPORTED BY</p>
+  <div class="sponsors-row reveal"><div class="sponsor-item">KAKATIYA JUNIOR COLLEGE</div><div class="sponsor-item">KAKATIYA IIT &amp; MEDICAL ACADEMY</div></div>
+  <div class="sponsors-row reveal"><div class="sponsor-item">KAKATIYA INSTITUTE OF TECHNOLOGY &amp; SCIENCE FOR WOMEN</div></div>
   <div class="sponsor-logos reveal">
-    <img src="1.png" alt="KOSGangaManjeera" class="sponsor-logo">
-    <img src="2.png" alt="Robotics Logo" class="sponsor-logo">
-    <img src="3.png" alt="IM-25 Logo" class="sponsor-logo">
+    <img src="1.png" alt="Kakatiya Olympiad School" class="sponsor-logo">
+    <img src="2.png" alt="Robotics" class="sponsor-logo">
+    <img src="3.png" alt="IM-25" class="sponsor-logo">
+  </div>
+</section>
+
+<!-- FEEDBACK -->
+<section id="feedback">
+  <span class="section-tag reveal" style="display:block;text-align:center;">// VISITOR FEEDBACK</span>
+  <h2 class="section-title reveal" style="text-align:center;">SHARE YOUR <em>EXPERIENCE</em></h2>
+  <p class="section-desc reveal" style="text-align:center;margin:0 auto 3rem;">Your feedback helps us make every Techtronica bigger and better. Tell us what you think!</p>
+  <div class="feedback-wrap reveal">
+    <form class="feedback-form" id="feedbackForm" onsubmit="submitFeedback(event)">
+      <div class="fb-row">
+        <div class="fb-group">
+          <label class="fb-label" for="fb-name">FULL NAME <span class="fb-req">*</span></label>
+          <input class="fb-input" type="text" id="fb-name" placeholder="Your name" required>
+        </div>
+        <div class="fb-group">
+          <label class="fb-label" for="fb-school">SCHOOL / INSTITUTION</label>
+          <input class="fb-input" type="text" id="fb-school" placeholder="Your school or college">
+        </div>
+      </div>
+      <div class="fb-row">
+        <div class="fb-group">
+          <label class="fb-label" for="fb-email">EMAIL ADDRESS</label>
+          <input class="fb-input" type="email" id="fb-email" placeholder="your@email.com">
+        </div>
+        <div class="fb-group">
+          <label class="fb-label" for="fb-phone">PHONE NUMBER</label>
+          <input class="fb-input" type="tel" id="fb-phone" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="fb-row">
+        <div class="fb-group">
+          <label class="fb-label" for="fb-role">YOU ARE A <span class="fb-req">*</span></label>
+          <select class="fb-input fb-select" id="fb-role" required>
+            <option value="" disabled selected>Select your role</option>
+            <option value="student">Student Participant</option>
+            <option value="parent">Parent / Guardian</option>
+            <option value="teacher">Teacher / Faculty</option>
+            <option value="visitor">General Visitor</option>
+            <option value="volunteer">Volunteer / Staff</option>
+            <option value="sponsor">Sponsor / Partner</option>
+          </select>
+        </div>
+        <div class="fb-group">
+          <label class="fb-label" for="fb-event">EVENT ATTENDED</label>
+          <select class="fb-input fb-select" id="fb-event">
+            <option value="" disabled selected>Select an event</option>
+            <option value="robo-race">Robo Race</option>
+            <option value="robo-soccer">Robo Soccer</option>
+            <option value="robo-kabaddi">Robo Kabaddi</option>
+            <option value="robo-sumo">Robo Sumo</option>
+            <option value="all-terrain">All Terrain Race</option>
+            <option value="logic-robots">Logic Robots</option>
+            <option value="multiple">Multiple Events</option>
+            <option value="spectator">Spectator Only</option>
+          </select>
+        </div>
+      </div>
+      <div class="fb-group">
+        <label class="fb-label">OVERALL EXPERIENCE <span class="fb-req">*</span></label>
+        <div class="fb-rating" id="starRating">
+          <span class="star" data-val="1" title="Poor">&#9733;</span>
+          <span class="star" data-val="2" title="Fair">&#9733;</span>
+          <span class="star" data-val="3" title="Good">&#9733;</span>
+          <span class="star" data-val="4" title="Great">&#9733;</span>
+          <span class="star" data-val="5" title="Outstanding">&#9733;</span>
+          <span class="rating-label" id="ratingLabel">Tap to rate</span>
+        </div>
+        <input type="hidden" id="fb-rating" value="">
+      </div>
+      <div class="fb-group">
+        <label class="fb-label">WHAT DID YOU ENJOY MOST?</label>
+        <div class="fb-chips">
+          <label class="chip"><input type="checkbox" value="events"> &#129302; The Competitions</label>
+          <label class="chip"><input type="checkbox" value="speakers"> &#127908; Speaker Talks</label>
+          <label class="chip"><input type="checkbox" value="organization"> &#128203; Organization</label>
+          <label class="chip"><input type="checkbox" value="venue"> &#128205; Venue &amp; Facilities</label>
+          <label class="chip"><input type="checkbox" value="energy"> &#9889; Overall Energy</label>
+          <label class="chip"><input type="checkbox" value="networking"> &#129309; Networking</label>
+        </div>
+      </div>
+      <div class="fb-group">
+        <label class="fb-label" for="fb-comments">COMMENTS &amp; SUGGESTIONS <span class="fb-req">*</span></label>
+        <textarea class="fb-input fb-textarea" id="fb-comments" placeholder="Share your thoughts, suggestions, or anything you'd like us to know..." required></textarea>
+      </div>
+      <div class="fb-group">
+        <label class="fb-label">WOULD YOU RECOMMEND THIS EVENT TO OTHERS?</label>
+        <div class="fb-radio-group">
+          <label class="fb-radio"><input type="radio" name="recommend" value="definitely"> <span>Definitely Yes!</span></label>
+          <label class="fb-radio"><input type="radio" name="recommend" value="probably"> <span>Probably</span></label>
+          <label class="fb-radio"><input type="radio" name="recommend" value="maybe"> <span>Maybe</span></label>
+          <label class="fb-radio"><input type="radio" name="recommend" value="no"> <span>Not Really</span></label>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:0.5rem;">
+        <button type="submit" class="fb-submit" id="submitBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          SUBMIT FEEDBACK
+        </button>
+      </div>
+    </form>
+    <div class="fb-success" id="fbSuccess">
+      <div class="fb-success-icon">&#10003;</div>
+      <h3>FEEDBACK RECEIVED!</h3>
+      <p>Thank you for taking the time to share your experience. Your input helps us make the next Techtronica even more epic. See you in 2027! &#129302;</p>
+      <button onclick="resetFeedback()" class="fb-reset">SUBMIT ANOTHER RESPONSE</button>
+    </div>
   </div>
 </section>
 
@@ -528,33 +673,23 @@
   <div class="footer-grid">
     <div class="footer-brand">
       <span class="logo">KOS <span>TECHTRONICA</span> <span style="font-size:0.6rem;color:rgba(200,232,255,0.25);">2026</span></span>
-      <p class="footer-desc">KOS Techtronica is a premier school-level robotics festival for students KG to Grade 10 — a platform for young innovators to explore technology through hands-on challenges, creative building, and teamwork.</p>
+      <p class="footer-desc">KOS Techtronica is a premier school-level robotics festival for students KG to Grade 10 &mdash; a platform for young innovators to explore technology through hands-on challenges, creative building, and teamwork.</p>
     </div>
     <div><h4>Events</h4><ul><li><a href="#events">Robo Race</a></li><li><a href="#events">Robo Soccer</a></li><li><a href="#events">Robo Kabaddi</a></li><li><a href="#events">Robo Sumo</a></li><li><a href="#events">All Terrain Race</a></li><li><a href="#events">Logic Robots</a></li></ul></div>
-    <div><h4>Information</h4><ul><li><a href="#schedule">Schedule</a></li><li><a href="#speakers">Speakers</a></li><li><a href="#venue">Venue & Travel</a></li><li><a href="#register">Register</a></li><li><a href="#">FAQs</a></li></ul></div>
+    <div><h4>Information</h4><ul><li><a href="#schedule">Schedule</a></li><li><a href="#speakers">Speakers</a></li><li><a href="#venue">Venue &amp; Travel</a></li><li><a href="#register">Register</a></li><li><a href="#feedback">Feedback</a></li></ul></div>
     <div><h4>Contact</h4><ul><li><a href="mailto:kosdeptofrobotics@gmail.com">kosdeptofrobotics@gmail.com</a></li><li><a href="tel:+919949613433">+91 9949613433</a></li><li><a href="#">Sponsor Us</a></li><li><a href="#">Media Kit</a></li><li><a href="#">Volunteer</a></li></ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 KOS TECHTRONICA. ALL RIGHTS RESERVED. BUILT BY ANIL KOVA.</span>
+    <span>&copy; 2026 KOS TECHTRONICA. ALL RIGHTS RESERVED. BUILT BY ANIL KOVA.</span>
     <div class="social-links">
-      <!-- Instagram — colorful gradient icon -->
       <a href="https://www.instagram.com/kos_ganga_manjeera_im25/" target="_blank" rel="noopener noreferrer" class="social-icon social-insta" title="Follow us on Instagram">
         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
-          <defs>
-            <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#f09433"/>
-              <stop offset="25%" stop-color="#e6683c"/>
-              <stop offset="50%" stop-color="#dc2743"/>
-              <stop offset="75%" stop-color="#cc2366"/>
-              <stop offset="100%" stop-color="#bc1888"/>
-            </linearGradient>
-          </defs>
+          <defs><linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#f09433"/><stop offset="25%" stop-color="#e6683c"/><stop offset="50%" stop-color="#dc2743"/><stop offset="75%" stop-color="#cc2366"/><stop offset="100%" stop-color="#bc1888"/></linearGradient></defs>
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#ig-grad)" stroke-width="2" fill="none"/>
           <circle cx="12" cy="12" r="4.5" stroke="url(#ig-grad)" stroke-width="2" fill="none"/>
           <circle cx="17.5" cy="6.5" r="1.2" fill="#cc2366"/>
         </svg>
       </a>
-      <!-- YouTube — red filled icon -->
       <a href="https://www.youtube.com/@KOSGangaManjeera" target="_blank" rel="noopener noreferrer" class="social-icon social-yt" title="Subscribe on YouTube">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 24">
           <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" fill="#FF0000"/>
@@ -593,11 +728,9 @@
     document.getElementById(id).classList.add('active');
   }
 
-  // Rulebook — simple open in new tab every click
+  // Rulebook
   document.querySelectorAll('.btn-rulebook').forEach(btn => {
-    btn.addEventListener('click', function() {
-      window.open(this.dataset.pdf, '_blank');
-    });
+    btn.addEventListener('click', function() { window.open(this.dataset.pdf, '_blank'); });
   });
 
   // Particles
@@ -605,17 +738,76 @@
   for (let i = 0; i < 35; i++) {
     const p = document.createElement('div');
     p.className = 'particle';
-    p.style.cssText = `left:${Math.random()*100}%;--dur:${4+Math.random()*8}s;--delay:-${Math.random()*10}s;--drift:${(Math.random()-0.5)*200}px;`;
+    p.style.cssText = 'left:' + (Math.random()*100) + '%;--dur:' + (4+Math.random()*8) + 's;--delay:-' + (Math.random()*10) + 's;--drift:' + ((Math.random()-0.5)*200) + 'px;';
     container.appendChild(p);
   }
 
   // Scroll reveal
   const ro = new IntersectionObserver((entries, obs) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); }
-    });
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); obs.unobserve(e.target); } });
   }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
   document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+  // Star rating
+  const ratingLabels = ['','Poor','Fair','Good','Great','Outstanding! ⚡'];
+  let selectedRating = 0;
+  document.querySelectorAll('.star').forEach(star => {
+    star.addEventListener('mouseover', function() {
+      const val = +this.dataset.val;
+      document.querySelectorAll('.star').forEach((s,i) => s.classList.toggle('active', i < val));
+      document.getElementById('ratingLabel').textContent = ratingLabels[val];
+    });
+    star.addEventListener('mouseleave', () => {
+      document.querySelectorAll('.star').forEach((s,i) => s.classList.toggle('active', i < selectedRating));
+      document.getElementById('ratingLabel').textContent = selectedRating ? ratingLabels[selectedRating] : 'Tap to rate';
+    });
+    star.addEventListener('click', function() {
+      selectedRating = +this.dataset.val;
+      document.getElementById('fb-rating').value = selectedRating;
+      document.getElementById('ratingLabel').textContent = ratingLabels[selectedRating];
+    });
+  });
+
+  // Feedback submit — instant UI + fire-and-forget to Google Sheets
+  function submitFeedback(e) {
+    e.preventDefault();
+    if (!selectedRating) { alert('Please give a star rating before submitting.'); return; }
+
+    const enjoyed = [...document.querySelectorAll('.fb-chips input:checked')].map(c => c.value).join(', ');
+    const recommend = document.querySelector('input[name="recommend"]:checked');
+
+    const params = new URLSearchParams({
+      name:      document.getElementById('fb-name').value,
+      school:    document.getElementById('fb-school').value,
+      email:     document.getElementById('fb-email').value,
+      phone:     document.getElementById('fb-phone').value,
+      role:      document.getElementById('fb-role').value,
+      event:     document.getElementById('fb-event').value,
+      rating:    selectedRating,
+      enjoyed:   enjoyed,
+      comments:  document.getElementById('fb-comments').value,
+      recommend: recommend ? recommend.value : ''
+    });
+
+    // Show success immediately
+    document.getElementById('feedbackForm').style.display = 'none';
+    document.getElementById('fbSuccess').classList.add('show');
+
+    // Send to Google Sheets in background
+    fetch('https://script.google.com/macros/s/AKfycbxyF4w4adhiCPCXnatp_Yq8aV3edmU739M-jnQQTyBLSl9WvvS6T_lsFcP3Qdb5Rm9W/exec?' + params.toString(), {
+      method: 'GET', mode: 'no-cors'
+    }).catch(() => {});
+  }
+
+  function resetFeedback() {
+    document.getElementById('feedbackForm').reset();
+    selectedRating = 0;
+    document.getElementById('fb-rating').value = '';
+    document.querySelectorAll('.star').forEach(s => s.classList.remove('active'));
+    document.getElementById('ratingLabel').textContent = 'Tap to rate';
+    document.getElementById('feedbackForm').style.display = 'flex';
+    document.getElementById('fbSuccess').classList.remove('show');
+  }
 </script>
 </body>
 </html>
